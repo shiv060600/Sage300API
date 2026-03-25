@@ -1,0 +1,7 @@
+.env
+training_documents/*
+.venv/
+__pycache__/
+*.pyc
+db/init/02_sage300_docs.sql
+trained_modes/*
