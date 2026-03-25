@@ -1,13 +1,16 @@
 import argparse
 import os
 from pathlib import Path
+from pydoc import Doc
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from sentence_transformers import SentenceTransformer
+from langchain_core.documents import Document
 
 
-def load_documents(docs_dir: Path):
-    documents = []
+
+def load_documents(docs_dir: Path) -> list[Document]:
+    documents: list[Document] = []
     supported_text_suffixes = {".txt", ".md", ".rst"}
 
     for path in docs_dir.rglob("*"):

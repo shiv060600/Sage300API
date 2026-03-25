@@ -1,11 +1,9 @@
 import os
 from functools import lru_cache
-
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from psycopg import connect
 from sentence_transformers import SentenceTransformer
-
 from models.request_models import QueryRequest
 from models.response_models import QueryResponse
 
